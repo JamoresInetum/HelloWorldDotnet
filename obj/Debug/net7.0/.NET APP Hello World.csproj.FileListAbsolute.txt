@@ -1,0 +1,15 @@
+C:\Desarrollo\.NET APP Hello World\bin\Debug\net7.0\.NET APP Hello World.exe
+C:\Desarrollo\.NET APP Hello World\bin\Debug\net7.0\.NET APP Hello World.deps.json
+C:\Desarrollo\.NET APP Hello World\bin\Debug\net7.0\.NET APP Hello World.runtimeconfig.json
+C:\Desarrollo\.NET APP Hello World\bin\Debug\net7.0\.NET APP Hello World.dll
+C:\Desarrollo\.NET APP Hello World\bin\Debug\net7.0\.NET APP Hello World.pdb
+C:\Desarrollo\.NET APP Hello World\obj\Debug\net7.0\.NET APP Hello World.csproj.AssemblyReference.cache
+C:\Desarrollo\.NET APP Hello World\obj\Debug\net7.0\.NET APP Hello World.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\.NET APP Hello World\obj\Debug\net7.0\.NET APP Hello World.AssemblyInfoInputs.cache
+C:\Desarrollo\.NET APP Hello World\obj\Debug\net7.0\.NET APP Hello World.AssemblyInfo.cs
+C:\Desarrollo\.NET APP Hello World\obj\Debug\net7.0\.NET APP Hello World.csproj.CoreCompileInputs.cache
+C:\Desarrollo\.NET APP Hello World\obj\Debug\net7.0\.NET APP Hello World.dll
+C:\Desarrollo\.NET APP Hello World\obj\Debug\net7.0\refint\.NET APP Hello World.dll
+C:\Desarrollo\.NET APP Hello World\obj\Debug\net7.0\.NET APP Hello World.pdb
+C:\Desarrollo\.NET APP Hello World\obj\Debug\net7.0\.NET APP Hello World.genruntimeconfig.cache
+C:\Desarrollo\.NET APP Hello World\obj\Debug\net7.0\ref\.NET APP Hello World.dll
