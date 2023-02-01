@@ -58,6 +58,8 @@
                 {
                     Console.WriteLine("Pulsa una tecla para volver al menú...");
                     Console.ReadKey();
+                } else {
+                    Console.WriteLine($"Hasta luego, {nombre}");
                 }
 
             } while (tecla.Key != ConsoleKey.A);
