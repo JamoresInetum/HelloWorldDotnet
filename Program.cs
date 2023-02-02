@@ -4,6 +4,7 @@
     {
         public const string NOMBRE = "Joel";
         public const string FICHERO = "Fichero.txt";
+        public const string RESULTADO_SUMA = "Resultado_suma.txt";
         static void Main(string[] args)
         {
             ConsoleKeyInfo tecla;
@@ -48,12 +49,13 @@
                         break;
 
                     case ConsoleKey.O:
-                        Console.WriteLine("En proceso...");
+                        // Console.WriteLine("En proceso...");
+                        Helper.GuardarSumaEnArchivo(FICHERO, RESULTADO_SUMA);
                         Console.ReadKey();
                         break;
 
                     case ConsoleKey.T:
-                        Console.WriteLine("Pulsa una tecla...");
+                        Console.WriteLine("\nPulsa una tecla...");
                         tecla = Console.ReadKey();
                         Helper.QueTeclaEs(tecla);
                         Console.ReadKey();
