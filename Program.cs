@@ -2,75 +2,76 @@
 {
     class Program
     {
-        public const int OPCIONES = 4;
+        public const string NOMBRE = "Joel";
+        public const string FICHERO = "Fichero.txt";
         static void Main(string[] args)
         {
             ConsoleKeyInfo tecla;
-            Console.WriteLine("¿Cómo te llamas?");
-            var nombre = Console.ReadLine();
-            var currentDate = DateTime.Now;
+            Helper.Saludar();
 
-            // Muestra el nombre y la fecha actuales
-            Console.WriteLine($"{Environment.NewLine}Hola, {nombre}. Hoy es {currentDate:D} y son las {currentDate:t}");
-
-            // Mantiene el ciclo mientras no se pulse la tecla A
             do
             {
                 Console.WriteLine("###### MENÚ ######");
-                
-                // Muestra las opciones de menú
-                for (int i = 0; i < OPCIONES; i++)
-                {
-                    Console.WriteLine($"Opcion {i}: Pinta {i}");
-                }
 
-                Console.WriteLine("###### #### ######");
+                // Muestra las opciones de menú
+                Console.WriteLine("E: Escribir");
+                Console.WriteLine("A: Añadir texto");
+                Console.WriteLine("L: Leer");
+                Console.WriteLine("O: Operar");
+                Console.WriteLine("T: Valor tecla");
+                Console.WriteLine("S: Salir");
+                Console.WriteLine("#################");
 
                 // Leo la tecla
                 tecla = Console.ReadKey();
-                
+
                 // Compruebo su valor
                 switch (tecla.Key)
                 {
-                    case ConsoleKey.NumPad0:
-                    case ConsoleKey.D0:
-                        new Metodos().Numero(0);
+                    case ConsoleKey.E:
+                        Console.WriteLine("\n¿Qué texto quieres guardar?");
+                        string textoParaGuardar = Console.ReadLine();
+                        Helper.GuardarEnArchivo(FICHERO, textoParaGuardar);
+                        Console.ReadKey();
                         break;
 
-                    case ConsoleKey.NumPad1:
-                    case ConsoleKey.D1:
-                        new Metodos().Numero(1);
+                    case ConsoleKey.A:
+                        Console.WriteLine("\n¿Qué texto quieres añadir?");
+                        string textoParaAñadir = Console.ReadLine();
+                        Helper.AñadirEnArchivo(FICHERO, "\n" + textoParaAñadir);
+                        Console.ReadKey();
                         break;
 
-                    case ConsoleKey.NumPad2:
-                    case ConsoleKey.D2:
-                        new Metodos().Numero(2);
+                    case ConsoleKey.L:
+                        Console.WriteLine("\nEl texto leído es: \n\n" + Helper.LeerDeArchivo(FICHERO));
+                        Console.ReadKey();
+                        break;
+
+                    case ConsoleKey.O:
+                        Console.WriteLine("En proceso...");
+                        Console.ReadKey();
+                        break;
+
+                    case ConsoleKey.T:
+                        Console.WriteLine("Pulsa una tecla...");
+                        tecla = Console.ReadKey();
+                        Helper.QueTeclaEs(tecla);
+                        Console.ReadKey();
                         break;
 
                     default:
+                        if (tecla.Key == ConsoleKey.S)
+                        {
+                            Console.WriteLine($"\nHasta luego, {NOMBRE}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nNo es una tecla válida");
+                        }
                         break;
                 }
 
-                Console.WriteLine("\nTecla: " + tecla.Key.ToString() + "\n");
-
-                // Pulsar tecla para volver al menú siempre que no se haya puesto la A
-                if (tecla.Key != ConsoleKey.A)
-                {
-                    Console.WriteLine("Pulsa una tecla para volver al menú...");
-                    Console.ReadKey();
-                } else {
-                    Console.WriteLine($"Hasta luego, {nombre}");
-                }
-
-            } while (tecla.Key != ConsoleKey.A);
-        }
-
-        public class Metodos
-        {
-            public void Numero(int numero)
-            {
-                Console.WriteLine($"\nEl numero enviado es :{numero}");
-            }
+            } while (tecla.Key != ConsoleKey.S);
         }
     }
 }
